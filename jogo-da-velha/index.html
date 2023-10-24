@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Velha</h1>
+        <!-- Estatísticas e histórico -->
+        <div id="stats-container">
+            <h2>Estatísticas</h2>
+            <p>Jogador X Venceu: <span id="player-x-wins">0</span> vezes</p>
+            <p>Jogador O Venceu: <span id="player-o-wins">0</span> vezes</p>
+        </div>
+        <div id="game-board">
+            <!-- Tabuleiro do jogo -->
+            <div class="row">
+                <div class="cell" onclick="makeMove(0, 0)"></div>
+                <div class="cell" onclick="makeMove(0, 1)"></div>
+                <div class="cell" onclick="makeMove(0, 2)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" onclick="makeMove(1, 0)"></div>
+                <div class="cell" onclick="makeMove(1, 1)"></div>
+                <div class="cell" onclick="makeMove(1, 2)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" onclick="makeMove(2, 0)"></div>
+                <div class="cell" onclick="makeMove(2, 1)"></div>
+                <div class="cell" onclick="makeMove(2, 2)"></div>
+            </div>
+        </div>
+        <p id="winner"></p>
+        <button id="reset-button" onclick="resetBoard()">Reiniciar Jogo</button>
+    </div>
+    <!-- Histórico de partidas -->
+    <div id="history-container">
+        <h2>Histórico de Partidas</h2>
+        <ul id="game-history">
+            <!-- Aqui serão adicionados os registros do histórico -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
